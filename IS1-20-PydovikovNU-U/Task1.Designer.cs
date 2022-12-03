@@ -63,6 +63,7 @@ namespace IS1_20_PydovikovNU_U
             this.button1.TabIndex = 0;
             this.button1.Text = "Стереть";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -72,6 +73,7 @@ namespace IS1_20_PydovikovNU_U
             this.button2.TabIndex = 1;
             this.button2.Text = "Вывести HDD";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
@@ -81,6 +83,7 @@ namespace IS1_20_PydovikovNU_U
             this.button3.TabIndex = 2;
             this.button3.Text = "Вывести HDD";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // listBox1
             // 
@@ -143,21 +146,21 @@ namespace IS1_20_PydovikovNU_U
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(551, 285);
+            this.textBox7.Location = new System.Drawing.Point(576, 285);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 11;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(552, 328);
+            this.textBox8.Location = new System.Drawing.Point(576, 324);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 12;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(587, 372);
+            this.textBox9.Location = new System.Drawing.Point(576, 382);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 20);
             this.textBox9.TabIndex = 13;
@@ -235,7 +238,7 @@ namespace IS1_20_PydovikovNU_U
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(471, 375);
+            this.label9.Location = new System.Drawing.Point(458, 384);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(112, 13);
             this.label9.TabIndex = 22;

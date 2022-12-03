@@ -45,6 +45,7 @@ namespace IS1_20_PydovikovNU_U
             this.button1.TabIndex = 0;
             this.button1.Text = "Задание 1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -104,7 +105,7 @@ namespace IS1_20_PydovikovNU_U
             this.Controls.Add(this.button1);
             this.Name = "Menu";
             this.Text = "Menu";
-            //this.Load += new System.EventHandler(this.Menu_Load);
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
