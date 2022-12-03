@@ -18,16 +18,16 @@ namespace IS1_20_PydovikovNU_U
         }
         Hdd<int> hdd;
         Videocard<string> videocard;
-        abstract class Accessories<T>// Абстрактный класс "Комплектующие" с обобщённым типом данных.
+        abstract class Components<R>
         {
             public int Price;       // Цена
-            public string Old;      // Год выпуска
-            public T Articyl {get; set;}  // Артикул
-            public Accessories(int price, string old, T articyl)
+            public string Year_of_release;      // Год выпуска
+            public R Articyl {get; set;}  // Артикул
+            public Components(int price, string year_of_release, R articyl)
             {
-                Price = price;       // Цена
-                Old = old;           // Год выпуска
-                Articyl = articyl;   // Артикул
+                Price = price;                               // Цена
+                Year_of_release = year_of_release;           // Год выпуска
+                Articyl = articyl;                           // Артикул
             }
             public void Display()
             {
@@ -35,40 +35,42 @@ namespace IS1_20_PydovikovNU_U
             }
         }
 
-        class Hdd<T> : Accessories<T> // Класс "Жёсткие диски" + наследование класса "Комплектующие"
+        class Hdd<R> : Components<R> 
         {
-            int Turnovers {set; get;}     // Количество оборотов
+            int Turnovers {set; get;}     // Количество оборотов жесткого диска
             string Interface {set; get;}  // Интерфейс
-            int Volume {set; get;}        // Объём
-            public Hdd(int price, string old, T articyl, int turnovers, string face, int volume)
+            int Volume {set; get; }        // Объём жесткого диска
+            public Hdd(int price, string old, R articyl, int turnovers, string face, int volume)
                 : base(price, old, articyl)
             {
                 Turnovers = turnovers;      // Кол. оборотов
                 Interface = face;           // Интерфейс
-                Volume = volume;            // Объём
+                Volume = volume;            // Объём жесткого диска
             }
 
-            public new string Display() // Вывод информации
+            public new string Display() 
             {
-                return ($"Цена: {Price}, Год выпуска: {Old}, Артикул: {Articyl}, Количество оборотов: {Turnovers}, Интерфейс: {Interface}, Объем: {Volume} гигабайт.");
+                return ($"Цена: {Price}, Год выпуска: {Year_of_release}, Артикул: {Articyl}, " +
+                    $"Количество оборотов: {Turnovers}, Интерфейс: {Interface}, Объем: {Volume} гигабайт.");
             }
         }
 
-        class Videocard<T> : Accessories<T> // Класс "Видеокарта" + наследование класса "Комплектующие"
+        class Videocard<R> : Components<R> 
         {
-            int GPU_frequency {set; get;}     // Частота gpu
-            string Manufacturer {set; get;}   // Производитель
-            int Memory {set; get;}            // Объём памяти
-            public Videocard(int price, string old, T articyl, int gpu, string manufacturer, int memory)
+            int GPU_frequency {set; get;}       // Частота gpu
+            string Manufacturer {set; get; }    // Производитель видеокарты
+            int Memory {set; get;}              // Объём памяти видеокарты
+            public Videocard(int price, string old, R articyl, int gpu, string manufacturer, int memory)
             :base(price, old, articyl)
             {
                 GPU_frequency = gpu;            // Частота gpu
-                Manufacturer = manufacturer;    // Производитель
-                Memory = memory;                // Объём памяти
+                Manufacturer = manufacturer;    // Производитель видеокарты
+                Memory = memory;                // Объём памяти видеокарты
             }
-            public new string Display() // Вывод информации
+            public new string Display() 
             {
-            return ($"Цена: {Price}, Год выпуска: {Old}, Артикул: {Articyl}, Частота CPU: {GPU_frequency}, Производительность: {Manufacturer}, Объем памяти: {Memory} гигабайт.");
+            return ($"Цена: {Price}, Год выпуска: {Year_of_release}, Артикул: {Articyl}, Частота CPU: {GPU_frequency}," +
+                    $" Производительность: {Manufacturer}, Объем памяти: {Memory} гигабайт.");
             }
         }
 
@@ -77,20 +79,6 @@ namespace IS1_20_PydovikovNU_U
 
         }
 
-        //private void button1_Click(object sender, EventArgs e) // Очистить листбокс
-        //{
-        
-        //}
-
-        //private void button2_Click(object sender, EventArgs e) // Вывести hdd
-        //{
-            
-        //}
-
-        //private void button3_Click(object sender, EventArgs e) // Вывести cpu
-        //{
-            
-        //}
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -107,7 +95,7 @@ namespace IS1_20_PydovikovNU_U
             }
             catch
             {
-                MessageBox.Show("Нужно ввести данные");
+                MessageBox.Show("Введите данные");
             }
         }
 
@@ -121,7 +109,7 @@ namespace IS1_20_PydovikovNU_U
             }
             catch
             {
-                MessageBox.Show("Нужно ввести данные");
+                MessageBox.Show("Введите данные");
             }
         }
     }

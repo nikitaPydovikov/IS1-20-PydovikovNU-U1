@@ -22,11 +22,6 @@ namespace IS1_20_PydovikovNU_U
 
         }
 
-        //private void button1_Click(object sender, EventArgs e) // открытие 1 задания
-        //{
-            
-        //}
-
         private void button2_Click(object sender, EventArgs e) // открытие 2 задания
         {
             
