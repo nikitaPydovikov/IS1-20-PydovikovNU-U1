@@ -19,36 +19,37 @@ namespace IS1_20_PydovikovNU_U
             InitializeComponent();
         }
 
-        MySqlConnection conn;           // Объявление базы данных
-        ConnectMySQL MySql;             // Подключение к базе данных
-        class ConnectMySQL              // Класс СУБД с данными
+        MySqlConnection conn;      // Объявление 
+        Connect MySql;             // Подключение 
+        class Connect              // Класс подключения
         {
-            string Host = "chuc.caseum.ru";     // Хост
-            string Port = "33333";              // Порт
-            string User = "uchebka";            // Пользователь
-            string Database = "uchebka";        // База данных
-            string Password = "uchebka";        // Пароль
+            string host = "chuc.caseum.ru";     
+            string port = "33333";             
+            string user = "uchebka";            
+            string db = "uchebka";        
+            string pass = "uchebka";        
             public string connStr;
-            public string Conect() // Подключение к СУБД типа MySQL и метод возврата строки подключения
+            public string Conect() // Взятие данных
             {
-                return connStr = $"server={Host};Port={Port};User={User};DataBase={Database};Password={Password};";
+                return connStr = $"server={host};Port={port};" +
+                    $"User={user};DataBase={db};Password={pass};";
             }
         }
 
-        private void button1_Click(object sender, EventArgs e) // Убедиться в корректности и работоспособности соединения
+        private void button1_Click(object sender, EventArgs e) 
         {
             try
             {
-                MySql = new ConnectMySQL();
+                MySql = new Connect();
                 MySql.Conect();                             // Подключение
                 conn = new MySqlConnection(MySql.connStr);
                 conn.Open();                                // Открытие БД
                 conn.Close();                               // Закрытие БД
-                MessageBox.Show("Сделано!");             // при успехе
+                MessageBox.Show("Сделано!");                // при успехе
             }
             catch
             {
-                MessageBox.Show("Не сделано");  // при провале
+                MessageBox.Show("Не сделано");              // при провале
             }
         }
 
