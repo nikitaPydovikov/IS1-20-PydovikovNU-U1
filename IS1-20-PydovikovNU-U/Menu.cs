@@ -24,7 +24,8 @@ namespace IS1_20_PydovikovNU_U
 
         private void button2_Click(object sender, EventArgs e) // открытие 2 задания
         {
-            
+            //Task2 T2 = new Task2();
+            //T2.ShowDialog();
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -36,6 +37,12 @@ namespace IS1_20_PydovikovNU_U
         {
             Task1 T1 = new Task1();
             T1.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Task2 T2 = new Task2();
+            T2.ShowDialog();
         }
     }
 }
