@@ -44,5 +44,11 @@ namespace IS1_20_PydovikovNU_U
             Task2 T2 = new Task2();
             T2.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Task3 T3 = new Task3();
+            T3.ShowDialog();
+        }
     }
 }
