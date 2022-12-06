@@ -39,7 +39,7 @@ namespace IS1_20_PydovikovNU_U
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(154, 127);
+            this.button1.Location = new System.Drawing.Point(61, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(189, 54);
             this.button1.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace IS1_20_PydovikovNU_U
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(154, 199);
+            this.button2.Location = new System.Drawing.Point(61, 203);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 54);
             this.button2.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace IS1_20_PydovikovNU_U
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(154, 272);
+            this.button3.Location = new System.Drawing.Point(61, 276);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(189, 54);
             this.button3.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace IS1_20_PydovikovNU_U
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(154, 345);
+            this.button4.Location = new System.Drawing.Point(61, 349);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(189, 54);
             this.button4.TabIndex = 3;
@@ -79,7 +79,7 @@ namespace IS1_20_PydovikovNU_U
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(154, 415);
+            this.button5.Location = new System.Drawing.Point(61, 419);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(189, 54);
             this.button5.TabIndex = 4;
@@ -90,17 +90,17 @@ namespace IS1_20_PydovikovNU_U
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(229, 52);
+            this.label1.Location = new System.Drawing.Point(101, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(115, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Задания ";
+            this.label1.Text = "Задания по практике";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 504);
+            this.ClientSize = new System.Drawing.Size(329, 504);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

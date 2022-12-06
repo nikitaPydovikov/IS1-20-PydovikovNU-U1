@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Task2;
 using Task3;
 using Task4;
+using Task5;
 
 
 namespace IS1_20_PydovikovNU_U
@@ -63,7 +64,8 @@ namespace IS1_20_PydovikovNU_U
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Task5y T5 = new Task5y();
+            T5.ShowDialog();
         }
     }
 }
