@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Task2;
 using Task3;
+using Task4;
+
 
 namespace IS1_20_PydovikovNU_U
 {
@@ -51,6 +53,17 @@ namespace IS1_20_PydovikovNU_U
         {
             Task3 T3 = new Task3();
             T3.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Task4z T4 = new Task4z();
+            T4.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

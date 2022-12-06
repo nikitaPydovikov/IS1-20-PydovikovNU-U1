@@ -12,41 +12,41 @@ using iblioteka_4;
 
 namespace Task4
 {
-    public partial class Task4 : Form
+    public partial class Task4z : Form
     {
-        ConnectDB f2 = new ConnectDB();// обявление переменной класса 
+        ConnectDB f2 = new ConnectDB();// Обявление переменной класса 
         MySqlConnection conn;
         private BindingSource bSource = new BindingSource();
         private MySqlDataAdapter MyDA = new MySqlDataAdapter();
         DataTable table = new DataTable();
-        public Task4()
+        public Task4z()
         {
             InitializeComponent();
         }
 
         private void Task4_Load(object sender, EventArgs e)
         {
-            //подключение к бд через класс
+            //Подключение к бд через класс
             f2.con();
             conn = new MySqlConnection(f2.connStr);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try//нужно чтоб случайно не вылезла ошибка :)
+            try
             {
                 conn.Open();
-                int rowIndex = e.RowIndex;// индекст строки
-                int conIndex = e.ColumnIndex;// индекс столбца
+                int rowIndex = e.RowIndex;      // Индекст строки
+                int conIndex = e.ColumnIndex;   // Индекс столбца
                 DataGridViewRow row = dataGridView1.Rows[rowIndex];//Получаем значение при клики
                 if (conIndex == 1)
                 {
-                    string com = $"SELECT photoUrl FROM t_datatime WHERE id = {row.Cells[conIndex - 1].Value.ToString()} ;";//команда чтоб забрать ссылку на картинку
+                    string com = $"SELECT photoUrl FROM t_datatime WHERE id = {row.Cells[conIndex - 1].Value.ToString()} ;";//Команда чтоб забрать ссылку на картинку
                     MySqlCommand command = new MySqlCommand(com, conn);
                     MySqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        pictureBox1.ImageLocation = reader[0].ToString();// вставляем ссылку на картинку
+                        pictureBox1.ImageLocation = reader[0].ToString();// Вставляем ссылку на картинку
                     }
                 }
             }

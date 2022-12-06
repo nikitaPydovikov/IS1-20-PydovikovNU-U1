@@ -203,6 +203,10 @@
       <Project>{f80852a9-ac3f-40b8-afb9-5a0dec70740b}</Project>
       <Name>Task3</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Task4\Task4.csproj">
+      <Project>{c889aeba-7bd2-4ccb-95d2-deed60ab1b2c}</Project>
+      <Name>Task4</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
