@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Task2;
+using Task3;
 
 namespace IS1_20_PydovikovNU_U
 {
